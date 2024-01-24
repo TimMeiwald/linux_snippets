@@ -1,0 +1,23 @@
+
+#######
+So server screen blanks
+
+Try adding consoleblank=60 or any mount of seconds that you want to the GRUB_CMDLINE_LINUX_DEFAULT= line in the /etc/default/grub file. Then run sudo update-grub and reboot the system.
+
+After your choice of seconds added to consoleblank the monitor should turn off after booting the system up.
+
+
+########
+So server doesn't show grub menu
+
+sudo -H gedit /etc/default/grub
+
+you need to change this
+
+Change GRUB_HIDDEN_TIMEOUT_QUIET=false to
+
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+
+
+
+
