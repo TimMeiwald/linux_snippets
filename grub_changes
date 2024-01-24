@@ -10,14 +10,18 @@ After your choice of seconds added to consoleblank the monitor should turn off a
 ########
 So server doesn't show grub menu
 
-sudo -H gedit /etc/default/grub
+As of ubuntu 22.10 i recommend this:
 
-you need to change this
+edit the file /etc/default/grub:
 
-Change GRUB_HIDDEN_TIMEOUT_QUIET=false to
+sudo nano /etc/default/grub
 
-GRUB_HIDDEN_TIMEOUT_QUIET=true
+Make sure you have this lines:
 
+GRUB_TIMEOUT=0
+GRUB_RECORDFAIL_TIMEOUT=0
 
+Save and exit run updater:
 
+sudo update-grub
 
