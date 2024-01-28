@@ -1,0 +1,6 @@
+/etc/systemd/logind.conf
+
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+Add LidSwitchIgnoreInhibited=no
+sudo service systemd-logind restart
